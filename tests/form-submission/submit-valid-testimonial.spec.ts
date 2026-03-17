@@ -4,12 +4,19 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Form Submission and Validation', () => {
-  test('Submit Valid Testimonial', async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     // 1. Navigate to the testimonials app
     await page.goto('https://qe-at-cgi-fi.github.io/testimonials/');
     await expect(page.getByRole('heading', { name: 'Testimonials for Vibe Coding Course' })).toBeVisible();
     await expect(page.getByRole('textbox', { name: 'What did you build with vibe' })).toBeVisible();
+  });
 
+  test.afterEach(async ({ page }) => {
+    // Close the browser
+    await page.close();
+  });
+
+  test('Submit Valid Testimonial', async ({ page }) => {
     // 2. Click on the 5-star rating
     await page.getByText('★').first().click();
 
