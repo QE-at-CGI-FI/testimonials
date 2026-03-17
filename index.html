@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials for Vibe Coding Course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Testimonials for Vibe Coding Course</h1>
+        
+        <div class="import-export-section">
+            <button id="exportBtn">Export Testimonials</button>
+            <input type="file" id="importFile" accept=".json" style="display: none;">
+            <button id="importBtn">Import Testimonials</button>
+            <button id="clearBtn" class="clear-btn">Clear All Testimonials</button>
+        </div>
+        
+        <p>Share your experience! Rate the course and tell us what you built with vibe coding. All submissions are anonymous.</p>
+        
+        <form id="testimonialForm">
+            <div class="rating-section">
+                <label>Course Rating:</label>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+            </div>
+            
+            <div class="testimonial-section">
+                <label for="testimonial">What did you build with vibe coding?</label>
+                <textarea id="testimonial" name="testimonial" rows="4" placeholder="Describe your project or experience..."></textarea>
+            </div>
+            
+            <button type="submit">Submit Testimonial</button>
+        </form>
+        
+        <div id="testimonialsList">
+            <h2>Recent Testimonials</h2>
+            <!-- Testimonials will be displayed here -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

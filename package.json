@@ -1,0 +1,23 @@
+{
+  "name": "testimonials",
+  "version": "1.0.0",
+  "description": "Oh my, there should be an app for this - encouraging people to write not only feedback out of a training session, but testimonials of their experience. This repo is for discovering what it would be.",
+  "main": "script.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QE-at-CGI-FI/testimonials.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/QE-at-CGI-FI/testimonials/issues"
+  },
+  "homepage": "https://github.com/QE-at-CGI-FI/testimonials#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0"
+  }
+}

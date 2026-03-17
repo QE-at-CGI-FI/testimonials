@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4a5568;
+    text-align: center;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #718096;
+    font-size: 1.1em;
+}
+
+form {
+    margin-bottom: 40px;
+}
+
+.rating-section, .testimonial-section {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4a5568;
+    font-size: 1.1em;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 35px;
+    color: #e2e8f0;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: color 0.3s ease;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.import-export-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#importBtn, #exportBtn {
+    background: linear-gradient(45deg, #48bb78, #38a169);
+    color: white;
+    padding: 4px 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 6px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 50%;
+    max-width: 80px;
+}
+
+#importBtn:hover, #exportBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+}
+
+.clear-btn {
+    background: linear-gradient(45deg, #f56565, #e53e3e) !important;
+    color: white;
+    padding: 4px 6px !important;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 6px !important;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 50% !important;
+    max-width: 80px !important;
+}
+
+.clear-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(245, 101, 101, 0.4);
+}
+
+#testimonialsList {
+    margin-top: 40px;
+}
+
+#testimonialsList h2 {
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.testimonial-item {
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-rating {
+    font-size: 24px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.testimonial-item.rating-5 {
+    border-left: 5px solid #48bb78;
+}
+
+.testimonial-item.rating-4 {
+    border-left: 5px solid #4299e1;
+}
+
+.testimonial-item.rating-3 {
+    border-left: 5px solid #ed8936;
+}
+
+.testimonial-item.rating-2 {
+    border-left: 5px solid #f56565;
+}
+
+.testimonial-item.rating-1 {
+    border-left: 5px solid #e53e3e;
+}
