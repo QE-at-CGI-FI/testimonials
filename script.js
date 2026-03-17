@@ -77,8 +77,6 @@ document.getElementById('testimonialForm').addEventListener('submit', function(e
     
     // Update display
     displayTestimonials();
-    
-    alert('Thank you for your testimonial!');
 });
 
 // Export testimonials to JSON file
