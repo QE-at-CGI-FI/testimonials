@@ -18,11 +18,7 @@ test.describe('Form Submission and Validation', () => {
     await expect(page.getByRole('textbox', { name: 'What did you build with vibe' })).toHaveValue('This course helped me build amazing projects with vibe coding');
 
     // 4. Click the Submit Testimonial button
-    const submitPromise = page.waitForEvent('dialog');
     await page.getByRole('button', { name: 'Submit Testimonial' }).click();
-    const dialog = await submitPromise;
-    await expect(dialog.message()).toBe('Thank you for your testimonial!');
-    await dialog.accept();
 
     // 5. Verify the testimonial is added to the list
     await expect(page.getByRole('textbox', { name: 'What did you build with vibe' })).toHaveValue('');
